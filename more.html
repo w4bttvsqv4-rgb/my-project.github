@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %} Далее {% endblock %} {% block
+content %}
+<h1>Больше о записях</h1>
+<div class="row flex-lg-row-reverse align-items-center g-5 py-5 post-card">
+  {% for post in posts %}
+  <div class="col-10 col-sm-8 col-lg-6"></div>
+  <div class="col-lg-6">
+    <h1 class="display-5 fw-bold lh-1 mb-3">{{ post.title }}</h1>
+    <p class="lead">{{ post.text }}</p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
